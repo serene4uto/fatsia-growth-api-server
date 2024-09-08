@@ -1,0 +1,28 @@
+curl -X POST "http://127.0.0.1:8000/fatsia/growth" \
+-H "Content-Type: application/json" \
+-d '{
+      "device_id": "edgevision-001",
+      "timestamp": "2024-08-27T12:34:56Z",
+      "detections": [
+        {
+          "object_id": "person",
+          "confidence": 0.98,
+          "bounding_box": {
+            "x_min": 100,
+            "y_min": 150,
+            "x_max": 400,
+            "y_max": 800
+          }
+        },
+        {
+          "object_id": "car",
+          "confidence": 0.85,
+          "bounding_box": {
+            "x_min": 500,
+            "y_min": 300,
+            "x_max": 900,
+            "y_max": 650
+          }
+        }
+      ]
+    }'
