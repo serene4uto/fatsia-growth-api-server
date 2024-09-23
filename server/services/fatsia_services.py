@@ -9,7 +9,7 @@ def process_growth_stage(data: GrowthStageData) -> bool:
     print(f"Device ID: {data.device_id}")
     print(f"Timestamp: {data.timestamp}")
     for detection in data.detections:
-        print(f"Detected {detection.object_id} with confidence {detection.confidence}")
+        print(f"Detected {detection.class_id} with confidence {detection.confidence}")
         print(f"Bounding Box: {detection.bounding_box}")
     # Placeholder for actual processing logic
     return True
